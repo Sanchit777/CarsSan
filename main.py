@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+import sklearn
 
 brand_dic={'Audi':0,
            'BMW':1,
