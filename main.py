@@ -32,7 +32,7 @@ def find_model(brand):
     model=car[car['Brand']==brand]['Model']
     return list(model)
 
-@st.cache(allow_output_mutation=True)
+
 
 def model_loader(path):
     model=joblib.load(path)
