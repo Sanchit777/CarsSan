@@ -98,12 +98,14 @@ regis=registration_dic[regis]
 inp_array=np.array([[mileage,engineV,year,brand,body_type,engine_type,regis,model]])
 
 predict=col1.button('Predict')
+exchange_rate = 83.5  # Example exchange rate, you should update this with the latest rate
 
 if predict:
-    pred=model_forest.predict(inp_array)
-    if pred<0:
-        st.error('the values must be irrelevent,try again by giving relevant information')
-    pred=round(float(pred),3)
-    write='The predicted price of the car is $'+ str(pred)
-    st.success(write)
-    st.balloons()    
+    pred = model_forest.predict(inp_array)
+    if pred < 0:
+        st.error('The values must be irrelevant. Please try again with relevant information.')
+    else:
+        pred_in_rupees = round(pred_in_dollars * exchange_rate, 2)
+        write = f'The predicted price of the car is  (approximately ₹{pred_in_rupees})'
+        st.success(write)
+        st.balloons()    
