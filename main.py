@@ -105,6 +105,7 @@ if predict:
     if pred < 0:
         st.error('The values must be irrelevant. Please try again with relevant information.')
     else:
+        pred_in_dollars = round(float(pred), 3)
         pred_in_rupees = round(pred_in_dollars * exchange_rate, 2)
         write = f'The predicted price of the car is  (approximately ₹{pred_in_rupees})'
         st.success(write)
