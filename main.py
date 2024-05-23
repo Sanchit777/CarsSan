@@ -47,48 +47,48 @@ st.markdown("<h2 style='text-align:center;'> Used Car Prediction </h2>",unsafe_a
 
 col1, col2 = st.columns(2)
 
-mileage=col1.number_input(label='No of Miles Driven',help='hown much car drive?')
+mileage=col1.number_input(label='No of Miles Driven',help='Hown much car drive?')
 
 year=col1.slider('Enter the year when car was manufactured',1980,2020,2005,help='The year when car is manufactured')
 
 brand_inp=col1.selectbox(label='Enter the brand of the car',options=brand_list,help='From which brand the car belongs')
 brand = brand_dic[brand_inp]
 
-engine_type=col1.selectbox(label='enter the engine type(fuel)',options=engine_type_list,help='in which gas the car is run')
+engine_type=col1.selectbox(label='Enter the engine type(fuel)',options=engine_type_list,help='In which gas the car is run')
 engine_type=engine_type_dic[engine_type]
 
-engineV=col1.number_input(label='enter the volume of car engine', max_value=6.4, help='enter the volume of  engine')
+engineV=col1.number_input(label='Enter the volume of car engine', max_value=6.4, help='Enter the volume of  engine')
 engineV=float(engineV)
 
-body_type=col2.selectbox(label='enter the body type of the car',options=body_list,help='select the body type of the car')
+body_type=col2.selectbox(label='Enter the body type of the car',options=body_list,help='Select the body type of the car')
 body_type=body_dic[body_type]
 
 if brand_inp=='Audi':
-    model_inp=col2.selectbox('enter the model of the audi',options=find_model('Audi'))
+    model_inp=col2.selectbox('Enter the model of the audi',options=find_model('Audi'))
     model=model_dic[model_inp]
 
 elif brand_inp=='Renault':
-    model_inp=col2.selectbox('enter the model of the Renault',options=find_model('Renault'))
+    model_inp=col2.selectbox('Enter the model of the Renault',options=find_model('Renault'))
     model=model_dic[model_inp]
 
 elif brand_inp=='Toyota':
-    model_inp=col2.selectbox('enter the model of the Toyota',options=find_model('Toyota'))
+    model_inp=col2.selectbox('Enter the model of the Toyota',options=find_model('Toyota'))
     model=model_dic[model_inp]
 
 elif brand_inp=='BMW':
-    model_inp=col2.selectbox('enter the model of the BMW',options=find_model('BMW'))
+    model_inp=col2.selectbox('Enter the model of the BMW',options=find_model('BMW'))
     model=model_dic[model_inp]
 
 elif brand_inp=='Mercedes-Benz':
-    model_inp=col2.selectbox('enter the model of the Mercedes-Benz',options=find_model('Mercedes-Benz'))
+    model_inp=col2.selectbox('Enter the model of the Mercedes-Benz',options=find_model('Mercedes-Benz'))
     model=model_dic[model_inp]
 
 elif brand_inp=='Mitsubishi':
-    model_inp=col2.selectbox('enter the model of the Mitsubishi',options=find_model('Mitsubishi'))
+    model_inp=col2.selectbox('Enter the model of the Mitsubishi',options=find_model('Mitsubishi'))
     model=model_dic[model_inp]
 
 elif brand_inp=='Volkswagen':
-    model_inp=col2.selectbox('enter the model of the Volkswagen',options=find_model('Volkswagen'))
+    model_inp=col2.selectbox('Enter the model of the Volkswagen',options=find_model('Volkswagen'))
     model=model_dic[model_inp]
 
 
