@@ -47,7 +47,7 @@ st.markdown("<h2 style='text-align:center;'> Used Car Prediction </h2>",unsafe_a
 
 col1, col2 = st.columns(2)
 
-mileage=col1.number_input(label='No of Miles Driven',help='Hown much car drive?')
+mileage=col1.number_input(label='No of Miles Driven',help='How much car drive?')
 
 year=col1.slider('Enter the year when car was manufactured',1980,2020,2005,help='The year when car is manufactured')
 
@@ -92,7 +92,7 @@ elif brand_inp=='Volkswagen':
     model=model_dic[model_inp]
 
 
-regis=col2.selectbox(label='The car have registration',options=registration_list, help='the car have registration or not')
+regis=col2.selectbox(label='The car have registration',options=registration_list, help='The car have registration or not')
 regis=registration_dic[regis]
 
 inp_array=np.array([[mileage,engineV,year,brand,body_type,engine_type,regis,model]])
